@@ -1,0 +1,36 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.sidebar {
+  height: 100vh;
+  background-color: #0ea5e9;
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr;
+}
+.main-content {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 10% 90%;
+}
+.header {
+  grid-column: 1 / span 2;
+}
+.projects {
+  grid-column: 1;
+  grid-row: 2;
+}
+.announcements {
+  grid-column: 2;
+  grid-row: 2;
+}
