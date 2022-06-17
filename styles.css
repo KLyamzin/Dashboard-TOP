@@ -1,4 +1,4 @@
-@import url("https://rsms.me/inter/inter.css");
+/* @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
 }
@@ -6,8 +6,20 @@ html {
   html {
     font-family: "Inter var", sans-serif;
   }
+} */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Inter_Web/Inter-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Inter_Web/Inter-Regular.woff") format("woff");
 }
-
+*,
+html,
+body {
+  font-family: "Inter", sans-serif !important;
+}
 .container {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -21,17 +33,100 @@ html {
 .main-content {
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 20% 80%;
   background-color: #d4d4d8;
 }
 .header {
+  background-color: #fff;
   grid-column: 1 / span 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
-.projects {
+.header .topbar {
+  grid-row: 1;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+  gap: 35px;
+  padding: 10px;
+}
+.topbar .search-bar {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  margin-left: 25px;
+}
+.search-bar input {
+  flex: 1 1 100%;
+  border-radius: 15px;
+}
+.topbar .notifications-name {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-right: 2em;
+}
+.header .fa_icon {
+  width: 1.1em;
+}
+.notifications-name .icon {
+  width: 3em;
+}
+.notifications-name p {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.header .bottombar {
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottombar .profile {
+  display: flex;
+  align-items: center;
+}
+.bottombar img {
+  width: 4em;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+.bottombar p {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+.username {
+  font-size: 1rem;
+  font-weight: 600;
+  /* flex: 1 1 100%; */
+}
+.bottombar .action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-right: 2em;
+}
+.action-buttons .profile-button-action {
+  padding: 6px 20px;
+
+  border-radius: 15px;
+  color: #fff;
+  background-color: #0ea5e9;
+}
+
+.main-content .projects {
   grid-column: 1;
   grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
-.announcements {
+.main-content .announcements {
   grid-column: 2;
   grid-row: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
